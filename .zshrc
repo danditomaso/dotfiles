@@ -73,6 +73,9 @@ export STARSHIP_CONFIG=~/.config/starship/config.toml
 export STARSHIP_CACHE=~/.config/starship/cache
 eval "$(starship init zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # # fnm
 # export PATH="/home/$USER/.local/share/fnm:$PATH"
 # eval "`fnm env`"
