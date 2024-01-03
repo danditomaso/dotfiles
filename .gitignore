@@ -1,0 +1,11 @@
+# Ignore compiled nvim plugins
+.config/nvim/plugin
+
+# Ignore lua lsp generated config
+.luarc.json
+
+# Ignore tmux plugins
+.config/tmux/plugins
+
+# Ignore DS_Store files
+.DS_Store
