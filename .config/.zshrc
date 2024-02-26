@@ -18,16 +18,17 @@ alias gmo='git checkout $(git remote show origin | grep "HEAD branch" | cut -d "
 alias grb='git branch --sort=-committerdate | grep -v "$(git branch --show-current)" | fzf --header "Checkout Recent Branch ( $(git branch --show-current))" --preview "git diff {1} --color=always" --pointer="" | xargs git checkout'
 # gcw -> git commit "work in progress"
 alias gcw='git commit -m "wip" --no-verify'
-# code -> open vim
-alias code="vim"
+# code -> open zed
+alias code="zed"
 # ks -> kill tmux server
 alias ks="tmux kill-server"
 alias ls="exa -1 --color=auto"
-alias -g ls="exa -1 --color=auto"
 alias vi="nvim" 
+alias -g ls="exa -1 --color=auto"
 alias lg="lazygit"
 alias vim="nvim" 
-alias s="source ~/.zshrc"
+alias sourcezsh="source ~/.config/.zshrc"
+alias editzsh="zed ~/.zshrc"
 alias cat="~/.cargo/bin/bat"
 
 # functions
