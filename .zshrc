@@ -21,8 +21,9 @@ alias c="clear"
 alias gmo='git checkout $(git remote show origin | grep "HEAD branch" | cut -d " " -f5) && git pull && git checkout - && git merge $(git remote show origin | grep "HEAD branch" | cut -d " " -f5)'
 # gcw -> git commit "work in progress"
 alias gcw='git commit -m "wip" --no-verify'
+alias gc='git commit -m' 
 alias gpo='git push origin'
-alias gts='git status'
+alias gs='git status'
 # vi -> open vim
 alias vi="nvim"
 # vim -> open neovim

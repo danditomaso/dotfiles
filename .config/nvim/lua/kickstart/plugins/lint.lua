@@ -1,5 +1,8 @@
 return {
 
+  {
+    'kickstart.plugins.indent_line',
+  },
   { -- Linting
     'mfussenegger/nvim-lint',
     event = { 'BufReadPre', 'BufNewFile' },
