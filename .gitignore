@@ -1,0 +1,4 @@
+# Ignore raycast
+raycast
+# Ignore DS_Store files
+.DS_Store
