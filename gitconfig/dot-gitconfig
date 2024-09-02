@@ -1,0 +1,21 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Dan Ditomaso
+	email = dan.ditomaso@gmail.com
+[alias]
+    branch-cleanup = "!git branch --merged | egrep -v \"(^\\*|main|dev)\" | xargs git branch -d #"
+[init]
+	templatedir = ~/.git-templates
+	defaultBranch = main
+[http]
+	postBuffer = 157286400
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
