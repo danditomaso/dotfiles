@@ -52,24 +52,30 @@ alias sourcezsh="source ~/.zshrc"
 alias c="clear"
 # better version of cat
 alias cat="bat"
+# alias docker to podman
+alias docker="podman"
+alias d="podman"
 alias ff='nvim $(fzf --preview="cat {}")'
 # gmo -> git merge origin
 alias gmo='git checkout $(git remote show origin | grep "HEAD branch" | cut -d " " -f5) && git pull && git checkout - && git merge $(git remote show origin | grep "HEAD branch" | cut -d " " -f5)'
 # gcw -> git commit "work in progress"
+alias ga='git add'
 alias gcw='git commit -m "wip" --no-verify'
 alias gc='git commit -m' 
 alias gl='git log --oneline' 
 alias gpo='git push origin'
 alias gs='git status'
-# vi -> open vim
+# vi -> open neovim
 alias vi="nvim"
+# v -> open neovim
+alias v="nvim"
 # vim -> open neovim
 alias vim="nvim"
 # ks -> kill tmux server
 alias ks="tmux kill-server"
 # exa -> ls
 alias ls="eza"
-alias l="eza -l"
+alias l="eza -l -a"
 alias lt="eza -tree"
 # lazygit
 alias lg="lazygit"
