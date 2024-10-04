@@ -31,7 +31,7 @@ ssh-add  --apple-use-keychain ~/.ssh/id_ed25519 > /dev/null 2>&1
 ssh-add  --apple-use-keychain ~/.ssh/id_ed25519_skolem > /dev/null 2>&1
 
 # atuin (history search)
-. "$HOME/.atuin/bin/env"
+# . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
 

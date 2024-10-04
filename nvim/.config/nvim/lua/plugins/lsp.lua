@@ -93,15 +93,15 @@ return {
 					},
 				},
 				marksman = {},
-				ocamllsp = {
-					manual_install = true,
-					cmd = { "dune", "exec", "ocamllsp" },
-					settings = {
-						codelens = { enable = true },
-						inlayHints = { enable = true },
-						syntaxDocumentation = { enable = true },
-					},
-				},
+				-- ocamllsp = {
+				-- 	manual_install = true,
+				-- 	cmd = { "dune", "exec", "ocamllsp" },
+				-- 	settings = {
+				-- 		codelens = { enable = true },
+				-- 		inlayHints = { enable = true },
+				-- 		syntaxDocumentation = { enable = true },
+				-- 	},
+				-- },
 				nil_ls = {},
 				pyright = {},
 				sqlls = {},
@@ -132,7 +132,7 @@ return {
 				stylua = {},
 			}
 
-			local manually_installed_servers = { "ocamllsp", "gleam", "rust_analyzer" }
+			local manually_installed_servers = { "gleam", "rust_analyzer" }
 
 			local mason_tools_to_install = vim.tbl_keys(vim.tbl_deep_extend("force", {}, servers, formatters))
 
