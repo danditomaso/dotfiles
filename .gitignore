@@ -2,3 +2,4 @@
 raycast
 # Ignore DS_Store files
 .DS_Store
+nvim/.config/nvim/.undodir
