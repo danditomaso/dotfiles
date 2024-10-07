@@ -1,40 +1,13 @@
 return {
 
 	{
-		"catppuccin/nvim",
+		"olimorris/onedarkpro.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("catppuccin").setup({
-				integrations = {
-					cmp = true,
-					fidget = true,
-					gitsigns = true,
-					harpoon = true,
-					indent_blankline = {
-						enabled = false,
-						scope_color = "sapphire",
-						colored_indent_levels = false,
-					},
-					mason = true,
-					native_lsp = { enabled = true },
-					noice = true,
-					notify = true,
-					symbols_outline = true,
-					telescope = true,
-					treesitter = true,
-					treesitter_context = true,
-				},
-				color_overrides = {
-					mocha = {
-						base = "#000000",
-						mantle = "#000000",
-						crust = "#000000",
-					},
-				},
-			})
+			require("onedarkpro").setup()
 
-			vim.cmd.colorscheme("catppuccin-mocha")
+			vim.cmd.colorscheme("onedark_dark")
 
 			-- Hide all semantic highlights until upstream issues are resolved (https://github.com/catppuccin/nvim/issues/480)
 			for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
