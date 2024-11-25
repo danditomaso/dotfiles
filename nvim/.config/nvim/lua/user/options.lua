@@ -1,3 +1,6 @@
+-- Set font used in neovim
+vim.opt.guifont = "monospace:h17"
+
 -- Enable relative line numbers
 vim.opt.nu = true
 vim.opt.rnu = true
@@ -48,6 +51,9 @@ vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- Enable persistent undo history
 vim.opt.undofile = true
 
+-- Dont show the ruler
+vim.opt.ruler = false
+
 -- Enable 24-bit color
 vim.opt.termguicolors = true
 
@@ -81,6 +87,6 @@ vim.opt.guicursor = {
 	"i-ci-ve:ver25", -- Insert, command-line insert, visual-exclude: vertical bar cursor with 25% width
 	"r-cr:hor20", -- Replace, command-line replace: horizontal bar cursor with 20% height
 	"o:hor50", -- Operator-pending: horizontal bar cursor with 50% height
-	"a:blinkwait700-blinkoff400-blinkon250", -- All modes: blinking settings
-	"sm:block-blinkwait175-blinkoff150-blinkon175", -- Showmatch: block cursor with specific blinking settings
+	"a:blinkoff0", -- All modes: blinking settings
+	"sm:block-blinkfoff0", -- Showmatch: block cursor with specific blinking settings
 }
