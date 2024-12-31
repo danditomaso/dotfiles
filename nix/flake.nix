@@ -1,5 +1,5 @@
 {
-  description = "Example Darwin system flake";
+  description = "Dan D's Darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -13,7 +13,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
-        [ pkgs.neovim
+        [ pkgs.vim
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -40,12 +40,12 @@
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#danMBP
-    darwinConfigurations."danMBP" = nix-darwin.lib.darwinSystem {
+    # $ darwin-rebuild build --flake .#simple
+    darwinConfigurations."simple" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."danMBP".pkgs;
+    darwinPackages = self.darwinConfigurations."simple".pkgs;
   };
 }

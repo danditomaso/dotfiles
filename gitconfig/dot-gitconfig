@@ -6,6 +6,7 @@
 [user]
 	name = Dan Ditomaso
 	email = dan.ditomaso@gmail.com
+	signingkey = /Users/dand/.ssh/id_ed25519.pub
 [alias]
     branch-cleanup = "!git branch --merged | egrep -v \"(^\\*|main|dev)\" | xargs git branch -d #"
 [init]
@@ -19,3 +20,7 @@
 	ui = auto
 [branch]
 	sort = -committerdate
+[gpg]
+	format = ssh
+[maintenance]
+	repo = /Users/dand/dev/danditomaso.com
