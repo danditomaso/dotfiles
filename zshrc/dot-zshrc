@@ -45,11 +45,11 @@ eval "$(atuin init zsh)"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #  auto start tmux
-SHELL=/usr/bin/zsh tmux
-export ZSH_TMUX_AUTOSTART=true
+#SHELL=/usr/bin/zsh tmux switchc -t `tmux new -dP`
+
+#export ZSH_TMUX_AUTOSTART=true
 
 # aliases
-alias bruh="bun run --hot"
 alias editzsh="vi ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 alias c="clear"
@@ -87,3 +87,17 @@ alias listformats="yt-dlp --list-formats"
 alias gtgd="~/Library/CloudStorage/GoogleDrive-dan.ditomaso@gmail.com/My Drive"
 alias docker-ports="docker container ls --format 'table {{.ID}}\t{{.Names}}\t{{.Ports}} -a'"
 . "/Users/dand/.deno/env"
+
+# Automatically start or attach to a tmux session when opening a new shell
+# if command -v tmux &> /dev/null; then
+#   if [ -z "$TMUX" ]; then
+#     # Check if there are existing tmux sessions
+#     if tmux ls &> /dev/null; then
+#       # Attach to the first existing session
+#       tmux attach-session -t 0
+#     else
+#       # Start a new session
+#       tmux new-session
+#     fi
+#   fi
+# fi
