@@ -3,10 +3,7 @@ return {
   opts = {
     window = {
       position = "right",
-      width = 30,
-      mappings = {
-        ["Y"] = "none",
-      },
+      width = 35,
     },
     filesystem = {
       filtered_items = {
@@ -15,10 +12,6 @@ return {
           ".git",
           ".DS_Store",
           "node_modules",
-        },
-        always_show = {
-          ".env",
-          ".env*",
         },
       },
     },
