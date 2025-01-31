@@ -1,5 +1,5 @@
 # Ghostty theme
-theme =  Github Dark
+theme =  Dark Pastel
 background = 000000
 
 # Shell integrations
@@ -16,7 +16,7 @@ font-style-bold = Bold
 font-style-bold-italic = Bold Italic
 
 # Font size
-font-size = 18 
+font-size = 18
 
 # Opacity of split windows
 unfocused-split-opacity = 0.97  
@@ -46,3 +46,5 @@ window-padding-balance = true
 window-padding-x = 0
 window-padding-y = 0
 
+# Hide titlebar on MacOS
+macos-titlebar-style = hidden

@@ -1,5 +1,3 @@
-# Add deno completions to search path
-if [[ ":$FPATH:" != *":/Users/dand/.zsh/completions:"* ]]; then export FPATH="/Users/dand/.zsh/completions:$FPATH"; fi
 # fzf
 export FZF_DEFAULT_OPTS="--bind ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --preview 'bat --color=always{}'"
 eval "$(fzf --zsh)"
@@ -7,7 +5,7 @@ eval "$(fzf --zsh)"
 # git
 export GIT_EDITOR=nvim
 
-# starship.rs
+# # starship.rs
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
@@ -25,6 +23,8 @@ export LVIM_HOME="$BASE_HOME/.local/bin"
 export POSTGRES_HOME="/opt/homebrew/opt/libpq/bin"
 export GOBIN=$GO_HOME/bin
 export GOPATH=$GO_HOME
+
+export XDG_CONFIG_HOME="/Users/dand/.config"
 
 export PATH=$PATH:$GO_PATH:$PNPM_HOME:$PYTHON_HOME:$GOBIN:$LVIM_HOME:$BUN_HOME:$POSTGRES_HOME
 
@@ -62,9 +62,12 @@ alias ff='nvim $(fzf --preview="cat {}")'
 alias gmo='git checkout $(git remote show origin | grep "HEAD branch" | cut -d " " -f5) && git pull && git checkout - && git merge $(git remote show origin | grep "HEAD branch" | cut -d " " -f5)'
 # gcw -> git commit "work in progress"
 alias ga='git add'
+alias gb='git branch'
+alias gch='git checkout'
 alias gcw='git commit -m "wip" --no-verify'
 alias gc='git commit -m' 
 alias gl='git log --oneline' 
+alias gpof='git push origin --force'
 alias gpo='git push origin'
 alias gs='git status'
 # vi -> open neovim
@@ -85,8 +88,6 @@ alias rec-audio="cd ~/Downloads && yt-dlp -f audio_only  --cookies-from-browser 
 alias rec="cd ~/Downloads && yt-dlp -f 480p  --cookies-from-browser firefox  -N 2"
 alias listformats="yt-dlp --list-formats"
 alias gtgd="~/Library/CloudStorage/GoogleDrive-dan.ditomaso@gmail.com/My Drive"
-alias docker-ports="docker container ls --format 'table {{.ID}}\t{{.Names}}\t{{.Ports}} -a'"
-. "/Users/dand/.deno/env"
 
 # Automatically start or attach to a tmux session when opening a new shell
 # if command -v tmux &> /dev/null; then
