@@ -1,8 +1,8 @@
 #:schema https://docs.jj-vcs.dev/latest/config-schema.json
 
 [user]
-name = "Dillon Mulroy"
-email = "dillon.mulroy@gmail.com"
+name = "Dan Ditomaso"
+email = "dan.ditomaso@gmail.com"
 
 [ui]
 editor = "nvim"
@@ -34,7 +34,7 @@ private-commits = "description(glob:'wip:*') | description(glob:'WIP:*') | descr
 # Show relative timestamps like "2 hours ago" instead of full dates
 'format_timestamp(timestamp)' = 'timestamp.ago()'
 
-# Show just username from email (dillon instead of dillon@example.com)
+# Show just username from email (dan instead of dan@example.com)
 'format_short_signature(signature)' = 'signature.email().local()'
 
 [fsmonitor]
@@ -64,7 +64,7 @@ stack = ["log", "-r", "stack()"]
 
 [revset-aliases]
 # Find commits authored by you
-'mine()' = 'author(dmmulroy)'
+'mine()' = 'author(dand)'
 
 # Your commits that aren't immutable (trunk/tags/remote branches)
 # Shows all your mutable work across the repo
@@ -95,4 +95,4 @@ stack = ["log", "-r", "stack()"]
 --when.repositories = ["~/Code/work"]
 
 [--scope.user]
-email = "dillon@cloudflare.com"
+email = "dan.ditomaso@gmail.com"

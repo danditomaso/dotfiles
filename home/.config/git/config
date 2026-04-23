@@ -45,8 +45,8 @@
 	gpgSign = true
 
 [user]
-	email = "dillon.mulroy@gmail.com"
-	name = "Dillon Mulroy"
+	email = "dan.ditomaso@gmail.com"
+	name = "Dan Ditomaso"
 	signingKey = "~/.ssh/key.pub"
 
 [includeIf "gitdir:~/Code/work/"]
