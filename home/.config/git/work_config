@@ -1,4 +1,5 @@
 [user]
-	email = "dan.ditomaso@gmail.com"
+	email = "dditomaso@spiritofmath.com"
 	name = "Dan Ditomaso"
-	signingkey = "~/.ssh/key.pub"
+	signingkey = /Users/dand/.ssh/id_rsa_azure.pub
+

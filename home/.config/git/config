@@ -47,7 +47,8 @@
 [user]
 	email = "dan.ditomaso@gmail.com"
 	name = "Dan Ditomaso"
-	signingKey = "~/.ssh/key.pub"
+	signingkey = /Users/dand/.ssh/changeme.pub
 
-[includeIf "gitdir:~/Code/work/"]
+[includeIf "gitdir:~/repos/*"]
 	path = "~/.config/git/work_config"
+
