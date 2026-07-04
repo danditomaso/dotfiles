@@ -20,6 +20,16 @@ __pycache__/
 # jj
 .jj
 
+# App runtime state, caches, and auth/session tokens (not config)
+home/.local/share/
+home/.local/state/
+home/.local/pipx/
+home/.config/raycast/
+home/.config/sanity/
+home/.config/vercel-plugin/
+home/.config/configstore/
+home/.config/NuGet/
+
 # opencode
 home/.config/opencode/node_modules/
 .opencode/plans/

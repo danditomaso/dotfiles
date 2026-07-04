@@ -45,9 +45,10 @@
 	gpgSign = true
 
 [user]
-	email = "dan.ditomaso@gmail.com"
+	email = "dditomaso@spiritofmath.com"
 	name = "Dan Ditomaso"
-	signingkey = /Users/dand/.ssh/changeme.pub
+	signingkey = /Users/dand/.ssh/id_rsa_azure.pub
+
 
 [includeIf "gitdir:~/repos/*"]
 	path = "~/.config/git/work_config"

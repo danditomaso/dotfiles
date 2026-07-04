@@ -127,6 +127,13 @@
         "mcp"
       ],
       "enabled": false
+    },
+    "Sanity": {
+      "headers": {
+        "Authorization": "Bearer skzWn4OwMA1W9D1RCRKEP24tM4ddrOukNvkxQeplXt2oidILs9rASyNwsjuh6T7TOoEN7bOsWidBS2Pag"
+      },
+      "type": "remote",
+      "url": "https://mcp.sanity.io"
     }
   }
 }

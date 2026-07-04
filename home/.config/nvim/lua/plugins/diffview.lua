@@ -40,6 +40,8 @@ return {
 						{ "n", "<s-tab>", actions.select_prev_entry, { desc = "Prev file" } },
 						{ "n", "<leader>gf", actions.toggle_files, { desc = "Toggle file panel" } },
 						{ "n", "<leader>e", actions.focus_files, { desc = "Focus file panel" } },
+						{ "n", "gF", actions.goto_file_edit, { desc = "Open file in previous tab" } },
+						{ "n", "<C-w>gf", actions.goto_file_tab, { desc = "Open file in new tab" } },
 						{ "n", "q", actions.close, { desc = "Close diffview" } },
 					},
 					file_panel = {
@@ -54,6 +56,8 @@ return {
 						{ "n", "<tab>", actions.select_next_entry, { desc = "Next file" } },
 						{ "n", "<s-tab>", actions.select_prev_entry, { desc = "Prev file" } },
 						{ "n", "<leader>gf", actions.toggle_files, { desc = "Toggle file panel" } },
+						{ "n", "gF", actions.goto_file_edit, { desc = "Open file in previous tab" } },
+						{ "n", "<C-w>gf", actions.goto_file_tab, { desc = "Open file in new tab" } },
 						{ "n", "q", actions.close, { desc = "Close diffview" } },
 					},
 					file_history_panel = {
