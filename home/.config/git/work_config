@@ -1,5 +1,12 @@
+# Work identity — included by ~/.config/git/config for any repo under ~/repos/.
+# Overrides the personal default and turns commit/tag signing back on.
 [user]
 	email = "dditomaso@spiritofmath.com"
 	name = "Dan Ditomaso"
 	signingkey = /Users/dand/.ssh/id_rsa_azure.pub
 
+[commit]
+	gpgSign = true
+
+[tag]
+	gpgSign = true

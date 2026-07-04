@@ -10,7 +10,7 @@
 	ui = "auto"
 
 [commit]
-	gpgSign = true
+	gpgSign = false
 
 [core]
 	editor = "nvim"
@@ -42,14 +42,15 @@
 	enabled = true
 
 [tag]
-	gpgSign = true
+	gpgSign = false
 
+# Personal identity — the default everywhere. Personal commits are
+# intentionally unsigned. Work repos under ~/repos/ override this via the
+# includeIf below (work email + Azure signing key + signing turned back on).
 [user]
-	email = "dditomaso@spiritofmath.com"
+	email = "dan.ditomaso@gmail.com"
 	name = "Dan Ditomaso"
-	signingkey = /Users/dand/.ssh/id_rsa_azure.pub
 
-
-[includeIf "gitdir:~/repos/*"]
+[includeIf "gitdir:~/repos/"]
 	path = "~/.config/git/work_config"
 
