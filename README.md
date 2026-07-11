@@ -329,6 +329,21 @@ dot package remove docker base  # Remove docker from base bundle only
    dot doctor
    ```
 
+5. **Set per-host signing key:**
+
+   Git config expects `~/.gitconfig.local` with the signing key path for this
+   machine. Not tracked (in `.gitignore`) so it stays per-host.
+
+   ```bash
+   cat > ~/.gitconfig.local <<'EOF'
+   [user]
+       signingkey = ~/.ssh/id_ed25519.pub
+   EOF
+   ```
+
+   Then add the same public key to GitHub as a **Signing Key** (Settings → SSH
+   and GPG keys → New SSH key → Key type: Signing Key).
+
 ### Customization
 
 #### Adding Packages

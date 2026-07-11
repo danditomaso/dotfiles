@@ -75,7 +75,7 @@ dot gen-ssh-key       # Generate ed25519 key by email domain
 | Fish | `config.fish` | Sources `conf.d/`, sets EDITOR/MANPAGER |
 | Neovim | `init.lua` | 1 line: `require("dmmulroy")` |
 | Tmux | `tmux.conf` | Prefix `C-;`, auto-installs TPM |
-| Git | `config` | SSH signing, `pull.rebase`, conditional include |
+| Git | `config` | SSH signing, `pull.rebase`, conditional include, per-host `~/.gitconfig.local` for signingkey |
 | jj | `config.toml` | SSH signing, private commits blocked, intent-check hook |
 
 ## UNIQUE STYLES

@@ -26,6 +26,9 @@ home/.config/opencode/node_modules/
 # jj per-repo configs
 home/.config/jj/repos/
 
+# machine-specific git identity (signingkey path differs per host)
+home/.config/git/config.local
+
 # pi agent runtime/state (keep settings + customization resources tracked)
 home/.pi/agent/*
 home/.pi/todos/*

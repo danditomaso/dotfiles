@@ -29,6 +29,9 @@
 [gpg]
 	format = "ssh"
 
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+
 [init]
 	defaultBranch = "main"
 
@@ -47,7 +50,11 @@
 [user]
 	email = "dan.ditomaso@gmail.com"
 	name = "Dan Ditomaso"
-	signingKey = "~/.ssh/key.pub"
 
 [includeIf "gitdir:~/Code/work/"]
 	path = "~/.config/git/work_config"
+
+# Machine-specific overrides (signingkey path, etc). Not tracked in dotfiles.
+# Kept outside stowed dir so folding ~/.config/git into a symlink is safe.
+[include]
+	path = "~/.gitconfig.local"
