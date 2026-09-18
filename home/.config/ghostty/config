@@ -77,17 +77,12 @@ keybind = ctrl+shift+bracket_left=resize_split:left,2
 keybind = ctrl+delete=equalize_splits
 
 # --- Tabs (tmux windows) ---
-# ctrl+c is SIGINT
-keybind = ctrl+shift+c=new_tab
-keybind = ctrl+1=goto_tab:1
-keybind = ctrl+2=goto_tab:2
-keybind = ctrl+3=goto_tab:3
-keybind = ctrl+4=goto_tab:4
-keybind = ctrl+5=goto_tab:5
-keybind = ctrl+6=goto_tab:6
-keybind = ctrl+7=goto_tab:7
-keybind = ctrl+8=goto_tab:8
-keybind = ctrl+9=last_tab
+# ctrl+c is SIGINT, so new_tab sits on ctrl+alt+t. cmd+t, the ghostty default,
+# is turned off.
+keybind = super+t=unbind
+keybind = ctrl+alt+t=new_tab
+# ctrl+1..9 is left free for herdr's switch_workspace. Ghostty's own tab
+# switching is on the macOS default cmd+1..9.
 
 # --- Pane lifecycle ---
 # ctrl+x is used by fish/emacs line editing
