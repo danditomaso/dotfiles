@@ -1,0 +1,9 @@
+onboarding = false
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[keys]
+# Carried over from the old tmux prefix; everything else is herdr stock.
+prefix = "ctrl+;"

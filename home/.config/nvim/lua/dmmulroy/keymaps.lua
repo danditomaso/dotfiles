@@ -10,34 +10,34 @@ vim.keymap.set("n", "<space>", "<nop>", { desc = "Disable space (leader) in norm
 
 vim.keymap.set("n", "<C-/>", "<nop>")
 
--- Window and kitty navigation
+-- Window and tmux navigation (christoomey/vim-tmux-navigator)
 vim.keymap.set("n", "<C-j>", function()
-	if vim.fn.exists(":NvimTmuxNavigateDown") ~= 0 then
-		vim.cmd.NvimTmuxNavigateDown()
+	if vim.fn.exists(":TmuxNavigateDown") ~= 0 then
+		vim.cmd.TmuxNavigateDown()
 	else
 		vim.cmd.wincmd("j")
 	end
 end, { desc = "Navigate down" })
 
 vim.keymap.set("n", "<C-k>", function()
-	if vim.fn.exists(":NvimTmuxNavigateUp") ~= 0 then
-		vim.cmd.NvimTmuxNavigateUp()
+	if vim.fn.exists(":TmuxNavigateUp") ~= 0 then
+		vim.cmd.TmuxNavigateUp()
 	else
 		vim.cmd.wincmd("k")
 	end
 end, { desc = "Navigate up" })
 
 vim.keymap.set("n", "<C-l>", function()
-	if vim.fn.exists(":NvimTmuxNavigateRight") ~= 0 then
-		vim.cmd.NvimTmuxNavigateRight()
+	if vim.fn.exists(":TmuxNavigateRight") ~= 0 then
+		vim.cmd.TmuxNavigateRight()
 	else
 		vim.cmd.wincmd("l")
 	end
 end, { desc = "Navigate right" })
 
 vim.keymap.set("n", "<C-h>", function()
-	if vim.fn.exists(":NvimTmuxNavigateLeft") ~= 0 then
-		vim.cmd.NvimTmuxNavigateLeft()
+	if vim.fn.exists(":TmuxNavigateLeft") ~= 0 then
+		vim.cmd.TmuxNavigateLeft()
 	else
 		vim.cmd.wincmd("h")
 	end

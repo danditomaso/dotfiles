@@ -35,6 +35,10 @@ clipboard-write = allow
 macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 
+# Chromeless. `hidden` rather than `window-decoration = none` so the window
+# keeps its native rounded corners, shadow and edge resizing.
+macos-titlebar-style = hidden
+
 # Always show ghostty as the title
 title = ghostty 
 
@@ -44,9 +48,73 @@ window-height = 30
 window-colorspace = display-p3
 window-padding-color = background
 window-padding-balance = true
-window-padding-x = 0
-window-padding-y = 0
+window-padding-x = 8
+window-padding-y = 8
 
 # Decrease scroll sensitivity
 mouse-scroll-multiplier = 0.4
 
+
+# Keybinds ported from tmux (see tmux/tmux.conf)
+#
+# Ghostty keybinds are unconditional: a bound key is consumed by the terminal
+# and never reaches the shell or vim. tmux could bind ctrl+h and still pass it
+# through (that is how vim-tmux-navigator works); Ghostty cannot. So bindings
+# that would shadow a control character the shell/signal layer needs are shipped
+# on ctrl+shift instead, with the plain ctrl+ version commented above them.
+
+# --- Splits (tmux: | and -) ---
+keybind = ctrl+shift+backslash=new_split:right
+keybind = ctrl+minus=new_split:down
+
+# --- Resize (tmux: prefix =/[/], no repeat flag needed here) ---
+keybind = ctrl+equal=resize_split:up,2
+keybind = ctrl+bracket_right=resize_split:right,2
+# ctrl+bracket_left is ESC
+keybind = ctrl+shift+bracket_left=resize_split:left,2
+
+# --- Equalize panes (tmux: prefix Delete -> select-layout tiled) ---
+keybind = ctrl+delete=equalize_splits
+
+# --- Tabs (tmux windows) ---
+# ctrl+c is SIGINT
+keybind = ctrl+shift+c=new_tab
+keybind = ctrl+1=goto_tab:1
+keybind = ctrl+2=goto_tab:2
+keybind = ctrl+3=goto_tab:3
+keybind = ctrl+4=goto_tab:4
+keybind = ctrl+5=goto_tab:5
+keybind = ctrl+6=goto_tab:6
+keybind = ctrl+7=goto_tab:7
+keybind = ctrl+8=goto_tab:8
+keybind = ctrl+9=last_tab
+
+# --- Pane lifecycle ---
+# ctrl+x is used by fish/emacs line editing
+keybind = ctrl+shift+x=close_surface
+# ctrl+m is Enter
+keybind = ctrl+shift+m=toggle_split_zoom
+# ctrl+r is fish reverse-search
+keybind = ctrl+shift+r=reload_config
+
+# --- Pane navigation (tmux: ctrl+h/j/k/l via vim-tmux-navigator) ---
+# ctrl+h is Backspace; ctrl+j/k are bindable but would kill vim window nav and
+# fish line editing with no per-app fallback, so all four stay on ctrl+shift
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
+# tmux ctrl+\ (last pane); ctrl+shift+backslash is taken by new_split above
+keybind = ctrl+shift+p=goto_split:previous
+# ctrl+space is set-mark
+keybind = ctrl+shift+space=goto_split:next
+
+# Full directional splits. tmux has no left/up split so these have no tmux
+# origin; ctrl+alt+hjkl mirrors the ctrl+shift+hjkl navigation above.
+keybind = ctrl+alt+h=new_split:left
+keybind = ctrl+alt+j=new_split:down
+keybind = ctrl+alt+k=new_split:up
+keybind = ctrl+alt+l=new_split:right
+
+# Split along whichever axis the current pane is longest (tmux: bind F)
+keybind = ctrl+shift+s=new_split:auto
