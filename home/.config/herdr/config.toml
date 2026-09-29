@@ -4,16 +4,40 @@ onboarding = false
 name = "catppuccin"
 auto_switch = false
 
+# Only non-stock bindings live here. Anything herdr already puts on a tmux key
+# (prefix+c/n/p/1..9 for tabs, prefix+x, prefix+z, prefix+hjkl) is left alone.
+#
+# The rule: the higher up the hierarchy, the cheaper the key.
+#   workspaces -> direct chords, no prefix
+#   tabs       -> prefix + tmux keys
+#   panes      -> prefix + tmux keys, plus a direct chord for the common case
 [keys]
-# Prefix and pane resizing carried over from the old tmux config; everything
-# else is herdr stock.
 prefix = "ctrl+;"
-resize_pane_left = "prefix+["
-resize_pane_right = "prefix+]"
-resize_pane_up = "prefix+="
-toggle_sidebar = "prefix+b"
 
-# Workspace movement, mirroring focus_pane_left/right one level up.
-previous_workspace = "prefix+shift+h"
-next_workspace = "prefix+shift+l"
+# Workspaces. tmux has no numbered session switch, so these are a new layer
+# rather than an override of anything in muscle memory.
 switch_workspace = "ctrl+1..9"
+previous_workspace = "ctrl+alt+p"
+next_workspace = "ctrl+alt+n"
+
+# tmux rename-window. Frees prefix+shift+t, and keeps prefix+r on resize_mode.
+rename_tab = "prefix+comma"
+
+
+# Direct pane focus, so switching panes costs one chord instead of two.
+# prefix+hjkl still works. Arrows, because ghostty already eats ctrl+alt+hjkl.
+focus_pane_left = "ctrl+alt+left"
+focus_pane_down = "ctrl+alt+down"
+focus_pane_up = "ctrl+alt+up"
+focus_pane_right = "ctrl+alt+right"
+last_pane = "prefix+semicolon"
+
+# One-shot resize. Arrows, because prefix+shift+hjkl is stock swap_pane_*.
+# prefix+r still opens resize mode.
+resize_pane_left = "prefix+shift+left"
+resize_pane_down = "prefix+shift+down"
+resize_pane_up = "prefix+shift+up"
+resize_pane_right = "prefix+shift+right"
+
+# Ships unbound. Creating a worktree stays stock on prefix+shift+g.
+open_worktree = "prefix+shift+o"
