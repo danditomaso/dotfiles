@@ -11,3 +11,5 @@ alias scratch 'nvim -c "setlocal buftype=nofile"'
 alias vimdiff 'nvim -d'
 alias wr 'wrangler'
 alias lc 'localcode'
+alias claudep="CLAUDE_CONFIG_DIR=~/.claude-p claude"
+

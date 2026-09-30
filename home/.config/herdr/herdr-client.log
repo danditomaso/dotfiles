@@ -24,3 +24,20 @@
 2026-09-17T15:10:43.281348Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=84308
 2026-09-17T15:10:43.281531Z  INFO herdr::client: connecting to server path=/Users/dand/.config/herdr/herdr-client.sock
 2026-09-17T15:10:43.290020Z  INFO herdr::client::handshake: endpoint handshake succeeded generation=1 server_version=0.9.1
+2026-09-23T16:27:33.410504Z  WARN herdr::sound: sound playback failed sound=Done err=player exited with exit status: 1: Error: AudioQueueStart failed (-66681)
+2026-09-24T16:39:39.269746Z  WARN herdr::sound: sound playback failed sound=Done err=player exited with exit status: 1: Error: AudioQueueStart failed (-66681)
+2026-09-25T17:26:30.004376Z  WARN herdr::sound: sound playback failed sound=Done err=player exited with exit status: 1: Error: AudioQueueStart failed (-66681)
+2026-09-28T20:20:15.264462Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:20:15.264784Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:20:15.281143Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:20:15.281264Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:21:18.850287Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:21:18.850380Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:21:18.857865Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-28T20:21:18.857977Z  WARN herdr::config::keybinds: config diagnostic prefix+c: kept keys.new_workspace, disabled keys.next_tab
+2026-09-29T00:02:19.570712Z  WARN herdr::sound: sound playback failed sound=Done err=player exited with exit status: 1: Error: AudioQueueStart failed (-66681)
+2026-09-29T00:33:13.401792Z  WARN herdr::config::keybinds: config diagnostic invalid keybinding: keys.zoom = "prefix+notakey"; disabling binding
+2026-09-29T00:33:13.401860Z  WARN herdr::config::keybinds: config diagnostic invalid keybinding: keys.zoom = "prefix+notakey"; disabling binding
+2026-09-30T00:53:04.633435Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="client" outcome="started" pid=1797
+2026-09-30T00:53:04.633541Z  INFO herdr::client: connecting to server path=/Users/dand/.config/herdr/herdr-client.sock
+2026-09-30T00:53:04.637026Z  INFO herdr::client::handshake: endpoint handshake succeeded generation=1 server_version=0.9.1

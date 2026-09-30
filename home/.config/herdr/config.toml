@@ -10,7 +10,7 @@ auto_switch = false
 # The rule: the higher up the hierarchy, the cheaper the key.
 #   workspaces -> direct chords, no prefix
 #   tabs       -> prefix + tmux keys
-#   panes      -> prefix + tmux keys, plus a direct chord for the common case
+#   panes      -> prefix + tmux keys
 [keys]
 prefix = "ctrl+;"
 
@@ -23,13 +23,14 @@ next_workspace = "ctrl+alt+n"
 # tmux rename-window. Frees prefix+shift+t, and keeps prefix+r on resize_mode.
 rename_tab = "prefix+comma"
 
+# Pane focus on the tmux keys. Same as stock, spelled out so an upstream
+# default change cannot move them.
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
 
-# Direct pane focus, so switching panes costs one chord instead of two.
-# prefix+hjkl still works. Arrows, because ghostty already eats ctrl+alt+hjkl.
-focus_pane_left = "ctrl+alt+left"
-focus_pane_down = "ctrl+alt+down"
-focus_pane_up = "ctrl+alt+up"
-focus_pane_right = "ctrl+alt+right"
+# tmux last-pane. Ships unbound.
 last_pane = "prefix+semicolon"
 
 # One-shot resize. Arrows, because prefix+shift+hjkl is stock swap_pane_*.
