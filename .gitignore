@@ -59,6 +59,9 @@ home/.pi/agent/extensions/**/node_modules/
 !home/.pi/agent/skills/**
 
 
-# herdr runtime logs
+# herdr runtime state and config backups
 home/.config/herdr/herdr-server.log
 home/.config/herdr/herdr-client.log
+home/.config/herdr/session.json
+home/.config/herdr/*.bak
+home/.config/herdr/*.bak.*
