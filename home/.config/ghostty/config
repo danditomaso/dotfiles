@@ -2,7 +2,7 @@
 theme = Catppuccin Macchiato
 
 # Updates
-auto-update-channel = tip
+auto-update-channel = stable
 
 # Shell integrations
 shell-integration = fish
