@@ -1,5 +1,9 @@
 onboarding = false
 
+[ui]
+# Tabs get named by plugins/tab-autoname instead.
+prompt_new_tab_name = false
+
 [theme]
 name = "catppuccin"
 auto_switch = false

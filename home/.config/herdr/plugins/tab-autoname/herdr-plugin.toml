@@ -1,0 +1,28 @@
+id = "local.tab-autoname"
+name = "Tab autoname"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Label tabs with the agent's session title, falling back to repo:branch"
+platforms = ["macos", "linux"]
+
+# pane.updated (terminal title changes) can't trigger hooks, so these are the
+# closest events that fire around a title change. fish covers cd and git in plain shells.
+[[events]]
+on = "pane.agent_detected"
+command = ["./autoname.sh"]
+
+[[events]]
+on = "pane.agent_status_changed"
+command = ["./autoname.sh"]
+
+[[events]]
+on = "pane.exited"
+command = ["./autoname.sh"]
+
+[[events]]
+on = "pane.focused"
+command = ["./autoname.sh"]
+
+[[events]]
+on = "tab.focused"
+command = ["./autoname.sh"]
