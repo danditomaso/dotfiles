@@ -45,12 +45,12 @@
 	gpgSign = false
 
 # Personal identity — the default everywhere. Personal commits are
-# intentionally unsigned. Work repos under ~/repos/ override this via the
-# includeIf below (work email + Azure signing key + signing turned back on).
+# intentionally unsigned. Work repos under ~/repos/work/ override this via the
+# includeIf below (work email + signing key + signing turned back on).
 [user]
 	email = "dan.ditomaso@gmail.com"
 	name = "Dan Ditomaso"
 
-[includeIf "gitdir:~/repos/"]
+[includeIf "gitdir:~/repos/work/"]
 	path = "~/.config/git/work_config"
 
