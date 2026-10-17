@@ -3,7 +3,7 @@
 [user]
 	email = "dditomaso@spiritofmath.com"
 	name = "Dan Ditomaso"
-	signingkey = /Users/dand/.ssh/id_rsa_azure.pub
+	signingkey = /Users/dand/.ssh/id_ed25519_github_new.pub
 
 [commit]
 	gpgSign = true
