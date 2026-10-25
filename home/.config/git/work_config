@@ -10,3 +10,14 @@
 
 [tag]
 	gpgSign = true
+
+# Git Credential Manager for work repos only. The empty helper clears the
+# system osxkeychain helper so GCM is the sole helper here.
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[credential "azrepos:org/spiritofmathschools"]
+	azureAuthority = https://login.microsoftonline.com/33891ae5-f07c-4614-9cec-1961bbf438cb
+	username = dditomaso@spiritofmath.com
