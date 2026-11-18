@@ -44,7 +44,7 @@
 [tag]
 	gpgSign = false
 
-# Personal identity — the default everywhere. Personal commits are
+# Personal identity, the default everywhere. Personal commits are
 # intentionally unsigned. Work repos under ~/repos/work/ override this via the
 # includeIf below (work email + signing key + signing turned back on).
 [user]
@@ -53,4 +53,3 @@
 
 [includeIf "gitdir:~/repos/work/"]
 	path = "~/.config/git/work_config"
-
